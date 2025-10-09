@@ -53,8 +53,8 @@ def display_weather(weather_data):
     table.add_column("Property", style="bold magenta", width=20)
     table.add_column("Value", style="bold white", width=30)
 
-    table.add_row("🌡️  Temperature", f"{temp}°C")
-    table.add_row("🤔 Feels Like", f"{feels_like}°C")
+    table.add_row("🌡️  Temperature", f"{temp}°F") 
+    table.add_row("🤔 Feels Like", f"{feels_like}°F")
     table.add_row("💧 Humidity", f"{humidity}%")
     table.add_row("🌤️  Conditions", description)
     table.add_row("💨 Wind Speed", f"{wind_speed} m/s")
@@ -85,7 +85,7 @@ def run_weather_app():
         params = {
             "q": city,
             "appid": API_KEY,
-            "units": "metric"
+            "units": "imperial"  # Use "metric" for Celsius
         }
 
         response = requests.get(BASE_URL, params=params)

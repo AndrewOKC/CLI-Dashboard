@@ -22,6 +22,7 @@ def show_menu():
     table.add_column("Description", style="white", width=40)
 
     # Add menu options
+    table.add_row("2", "Just Playing Around", "No Program Here, Just Playing Around")
     table.add_row("1", "Weather App", "Get real-time weather for any city")
     table.add_row("0", "Exit", "Close the dashboard")
 
