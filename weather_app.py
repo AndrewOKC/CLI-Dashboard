@@ -9,7 +9,7 @@ from utils import fake_progress_bar
 console = Console()
 
 # You'll need to get your own API key from https://openweathermap.org/api
-API_KEY = "YOUR_API_KEY_HERE"
+API_KEY = "API_KEY_HERE"
 BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 
@@ -96,10 +96,12 @@ def run_weather_app():
         elif response.status_code == 404:
             console.print(f"\n[bold red]❌ City '{city}' not found. Please try again.[/bold red]\n")
         elif response.status_code == 401:
-            console.print("\n[bold red]❌ Invalid API key. Please set your OpenWeatherMap API key in weather_app.py[/bold red]\n")
-            console.print("[yellow]Get your free API key at: https://openweathermap.org/api[/yellow]\n")
+            console.print("\n[bold red]❌ Invalid API key or API key not activated yet.[/bold red]\n")
+            console.print("[yellow]Note: New API keys can take up to 2 hours to activate.[/yellow]")
+            console.print(f"[yellow]API Response: {response.text}[/yellow]\n")
         else:
             console.print(f"\n[bold red]❌ Error: {response.status_code}[/bold red]\n")
+            console.print(f"[yellow]Response: {response.text}[/yellow]\n")
 
     except requests.exceptions.RequestException as e:
         console.print(f"\n[bold red]❌ Network error: {str(e)}[/bold red]\n")
