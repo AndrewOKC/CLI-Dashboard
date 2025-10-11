@@ -1,3 +1,4 @@
+import os
 import requests
 from rich.console import Console
 from rich.panel import Panel
@@ -5,11 +6,15 @@ from rich.table import Table
 from rich.prompt import Prompt
 from rich.text import Text
 from utils import fake_progress_bar
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 console = Console()
 
 # You'll need to get your own API key from https://openweathermap.org/api
-API_KEY = "API_KEY_HERE"
+API_KEY = os.getenv("OPENWEATHER_API_KEY")
 BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 
