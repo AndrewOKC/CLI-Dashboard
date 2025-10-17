@@ -22,8 +22,9 @@ def show_menu():
     table.add_column("Description", style="white", width=40)
 
     # Add menu options
-    table.add_row("2", "Just Playing Around", "No Program Here, Just Playing Around")
     table.add_row("1", "Weather App", "Get real-time weather for any city")
+    table.add_row("2", "AI Chatbot", "Chat with Gemini AI assistant")
+    table.add_row("3", "Just Playing Around", "No Program Here, Just Playing Around")
     table.add_row("0", "Exit", "Close the dashboard")
 
     console.print("\n")
@@ -32,6 +33,6 @@ def show_menu():
 
     return Prompt.ask(
         "[bold cyan]Select an option[/bold cyan]",
-        choices=["1", "0"],
+        choices=["1", "2", "0"],
         default="1"
     )

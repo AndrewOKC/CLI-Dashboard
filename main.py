@@ -8,6 +8,7 @@ from rich.console import Console
 from utils import show_logo, fake_progress_bar, clear_screen
 from menu import show_menu
 from weather_app import run_weather_app
+from chatbot_app import run_chatbot_app
 
 console = Console()
 
@@ -37,6 +38,13 @@ def main():
             fake_progress_bar("Loading Weather App", duration=1)
             clear_screen()
             run_weather_app()
+
+        elif choice == "2":
+            # Run chatbot app
+            clear_screen()
+            fake_progress_bar("Loading AI Chatbot", duration=1)
+            clear_screen()
+            run_chatbot_app()
 
         elif choice == "0":
             # Exit
