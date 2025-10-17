@@ -86,7 +86,7 @@ def run_chatbot_app():
         user_message = Prompt.ask("\n[bold cyan]You[/bold cyan]")
 
         # Check for exit commands
-        if user_message.lower() in ['exit', 'quit', 'back', 'q']:
+        if user_message.lower() in ['exit', 'quit', 'back', 'q', '/exit', '/quit', '/back']:
             console.print("\n[bold yellow]👋 Ending chat session...[/bold yellow]\n")
             break
 
@@ -99,7 +99,7 @@ def run_chatbot_app():
         display_message("user", user_message)
 
         # Show thinking animation
-        fake_progress_bar("AI is thinking", duration=0.5)
+        fake_progress_bar("AI is thinking", duration=10)
 
         try:
             # Send message to Gemini
