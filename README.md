@@ -57,7 +57,7 @@ Get real-time weather information for any city in the world with a beautiful dis
 -   Weather conditions
 -   Wind speed
 
-![Weather App](images/Dashboard_Weather_App.png)
+![Weather App](images/Dashboard_Weather_App_New.png)
 
 ### AI Chatbot
 
