@@ -6,27 +6,29 @@ A flashy terminal dashboard with animated logos, progress bars, and multiple CLI
 
 ## Features
 
-- Cool ASCII art logo with colorful styling
-- Animated progress bars on startup and transitions
-- Interactive menu system
-- Weather app with real-time data from OpenWeatherMap (in Fahrenheit)
-- AI Chatbot powered by Claude
+-   Cool ASCII art logo with colorful styling
+-   Animated progress bars on startup and transitions
+-   Interactive menu system
+-   Weather app with real-time data from OpenWeatherMap (in Fahrenheit)
+-   AI Chatbot powered by Gemini
 
 ## Installation
 
 1. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 2. Create a `.env` file in the project root (you can copy `.env.example`):
+
 ```bash
 cp .env.example .env
 ```
 
 3. Add your API keys to the `.env` file:
-   - Get a free API key from [OpenWeatherMap](https://openweathermap.org/api)
-   - Get an API key from [Anthropic](https://console.anthropic.com/) for the AI Chatbot
+    - Get a free API key from [OpenWeatherMap](https://openweathermap.org/api)
+    - Get an API key from [Anthropic](https://console.anthropic.com/) for the AI Chatbot
 
 ```
 OPENWEATHERMAP_API_KEY=your_openweathermap_key_here
@@ -36,6 +38,7 @@ ANTHROPIC_API_KEY=your_anthropic_key_here
 ## Usage
 
 Run the dashboard:
+
 ```bash
 python main.py
 ```
@@ -43,21 +46,25 @@ python main.py
 ## Programs
 
 ### Weather App
+
 Get real-time weather information for any city in the world with a beautiful display showing:
-- Temperature (Fahrenheit)
-- Feels like temperature (Fahrenheit)
-- Humidity
-- Weather conditions
-- Wind speed
+
+-   Temperature (Fahrenheit)
+-   Feels like temperature (Fahrenheit)
+-   Humidity
+-   Weather conditions
+-   Wind speed
 
 ![Weather App](images/Dashboard_Weather_App.png)
 
 ### AI Chatbot
-Interactive AI assistant powered by Claude that can:
-- Answer questions
-- Help with problem-solving
-- Have natural conversations
-- Provide information on various topics
+
+Interactive AI assistant powered by Gemini that can:
+
+-   Answer questions
+-   Help with problem-solving
+-   Have natural conversations
+-   Provide information on various topics
 
 ![AI Chatbot](images/Dashboard_AI_Chat_App.png)
 
@@ -73,7 +80,7 @@ To add a new program to the dashboard:
 
 ## Requirements
 
-- Python 3.7+
-- rich
-- requests
-- pyfiglet
+-   Python 3.7+
+-   rich
+-   requests
+-   pyfiglet
