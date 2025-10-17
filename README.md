@@ -28,11 +28,11 @@ cp .env.example .env
 
 3. Add your API keys to the `.env` file:
     - Get a free API key from [OpenWeatherMap](https://openweathermap.org/api)
-    - Get an API key from [Anthropic](https://console.anthropic.com/) for the AI Chatbot
+    - Get an API key from [Google AI Studio](https://makersuite.google.com/app/apikey) for the AI Chatbot
 
 ```
 OPENWEATHERMAP_API_KEY=your_openweathermap_key_here
-ANTHROPIC_API_KEY=your_anthropic_key_here
+GEMINI_API_KEY=your_gemini_key_here
 ```
 
 ## Usage
@@ -40,8 +40,10 @@ ANTHROPIC_API_KEY=your_anthropic_key_here
 Run the dashboard:
 
 ```bash
-python main.py
+python3 main.py
 ```
+
+> **Note for Mac users:** Use `python3` and `pip3` commands. If you have Python 3 set as your default, you can use `python` and `pip` instead.
 
 ## Programs
 
@@ -81,6 +83,8 @@ To add a new program to the dashboard:
 ## Requirements
 
 -   Python 3.7+
--   rich
--   requests
--   pyfiglet
+-   rich==13.7.0
+-   requests==2.31.0
+-   pyfiglet==1.0.2
+-   python-dotenv==1.0.0
+-   google-generativeai>=0.8.0
